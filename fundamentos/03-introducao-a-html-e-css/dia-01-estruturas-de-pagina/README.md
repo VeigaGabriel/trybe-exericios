@@ -1,4 +1,4 @@
-Anotações - Estrutura de Página
+<!-- Anotações - Estrutura de Página -->
 
 <!DOCTYPE html> - Para dizer ao navegador que estamos em um documento HTML 5
 |<html lang ="pt-br"> - Raiz de toda a sua página HTML, com a linguagem "pt-br"
