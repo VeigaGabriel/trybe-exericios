@@ -1,10 +1,8 @@
 Anotações - Estrutura de Página
 
-Tags: (Substituir "[]" por "<>")
-
-<!DOCTYPE html> - [!DOCTYPE html] Para dizer ao navegador que estamos em um documento HTML 5
-|<html lang ="pt-br"> - [html lang ="pt-br"] Raiz de toda a sua página HTML, com a linguagem "pt-br"
-    <head> - [ head ] Configurações da página (informações não visíveis)
+<!DOCTYPE html> - Para dizer ao navegador que estamos em um documento HTML 5
+|<html lang ="pt-br"> - Raiz de toda a sua página HTML, com a linguagem "pt-br"
+    <head> - Configurações da página (informações não visíveis)
     <meta charset="UTF-8"> Dizer a página o charset, o conjunto de caracteres
 </head>
 <body> - Corpo da página, todo o conteúdo que vai estar nela
