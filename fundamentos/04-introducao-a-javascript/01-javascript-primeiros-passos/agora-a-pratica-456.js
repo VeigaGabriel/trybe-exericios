@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
 // --------- PROGRAMA 4 --------------
 // 🚀 Utilize if/else para fazer um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. 
 // Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. 
@@ -19,8 +21,7 @@ function isTriangle (angulo1, angulo2, angulo3) {
   } console.log(triangleIs)
 }
 
-isTriangle(90, 90, 90)
-console.log(90 + 90 + 90)
+// isTriangle(90, 90, 90)
 
 
 
@@ -38,14 +39,45 @@ console.log(90 + 90 + 90)
 // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
 
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
-
-
-
-// CÓDIGO ------------------------
-
-
-
-
+function pecaXadrez(peca) {
+	let pecaFaz;
+	switch(peca) {
+		case "Rei":
+			pecaFaz = 'Pode mover-se em qualquer direção, porém apenas uma casa por vez, como indicam os pontos vermelhos na figura abaixo.'
+			break;
+		
+		case "Dama":
+			pecaFaz = 'Assim como o Rei, pode mover-se em qualquer direção (vertical, horizontal e diagonal), porém quantas casas quiser, desde que estejam livres.'
+			break;
+			
+		case "Torre":
+			pecaFaz = 'Move-se em linha reta, tanto na vertical quanto na horizontal, quantas casas quiser.'
+			break;
+				
+		case "Bispo":
+			pecaFaz = 'Move-se na diagonal, quantas casas quiser. O Bispo que iniciar a partida em uma casa branca somente poderá transitar pelas brancas, enquanto o \
+			Bispo que inicia em uma casa preta somente poderá transitar pelas casas pretas.'
+			break;
+					
+		case "Cavalo":
+			pecaFaz = 'É a única peça que pode saltar sobre as outras peças do tabuleiro, sejam elas amigas ou inimigas. \
+			O movimento executado pelo Cavalo é conhecido por “um-dois” ou “em L”. \
+			Ele pode andar duas casas na horizontal e uma na vertical, ou duas na vertical e uma na horizontal, uma na horizontal \
+			e duas na vertical, e assim por diante. Quando a casa de saída do Cavalo for escura, a casa de chegada será clara, e vice-versa.'
+			break;
+						
+		case "Peão":
+			pecaFaz/*.toLowerCase()*/ = 'Move-se sempre uma casa para frente, exceto no primeiro movimento, quando pode mover-se duas casas. \
+			O peão é a única peça que não pode retroceder, e também a única que efetua a captura com um movimento diferente do \
+			utilizado para avançar no tabuleiro. O peão pode capturar as peças que estejam uma fileira acima, mas nas colunas adjacentes a sua.'/*.toLowerCase()*/
+			break;
+							
+		default:
+			console.log('Peça inválida.')
+	} 
+			console.log(pecaFaz/*.toLowerCase()*/);
+}
+			pecaXadrez("peão"/*.toLowerCase()*/);
 
 
 

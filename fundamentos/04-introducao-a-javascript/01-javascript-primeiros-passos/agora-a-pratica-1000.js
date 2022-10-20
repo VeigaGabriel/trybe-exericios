@@ -1,3 +1,5 @@
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
 // --------- PROGRAMA 7 --------------
 // Utilize if/else para fazer um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 // Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR.

@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
 //🚀 Há um par entre nós
 
 // --------- PROGRAMA 7 --------------

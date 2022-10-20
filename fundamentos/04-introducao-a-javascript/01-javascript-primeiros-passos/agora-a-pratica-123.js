@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
 // --------- PROGRAMA 1 --------------
 // Utilize if/else para fazer um programa que retorne o maior de dois números. 
 // Defina, no começo do programa, duas constantes com os valores que serão comparados.
