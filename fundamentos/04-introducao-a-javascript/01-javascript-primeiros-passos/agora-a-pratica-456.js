@@ -7,8 +7,20 @@
 // Um ângulo será considerado inválido se não tiver um valor positivo.
 
 
+function isTriangle (angulo1, angulo2, angulo3) {
+	if (angulo1 == 0 || angulo2 == 0 || angulo3 == undefined) { // || angulo1 !== Number || angulo2 !== Number || angulo3 !== Number) {
+		triangleIs = 'Erro, defina os 3 valores do triângulo'
+	} else if (angulo1 + angulo2 + angulo3 == 180) {
+    triangleIs = true
+  } else if (angulo1 + angulo2 + angulo3 > 180) {
+  	triangleIs = false
+  } else {
+    triangleIs = "Erro, desconhecido, verifique os valores;"
+  } console.log(triangleIs)
+}
 
-//CÓGIDO -----------------------
+isTriangle(90, 90, 90)
+console.log(90 + 90 + 90)
 
 
 
