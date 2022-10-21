@@ -11,13 +11,13 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // Some todos os valores contidos no array e imprima o resultado;
 
-let soma = 0;
-for (i of numbers) {
-  soma += i;
+function somaNumbers () {
+  let soma = 0;
+  for (i of numbers) {
+  }
+  console.log(soma)
 }
-
-console.log(soma)
-
+// somaNumbers();
 //       ------- REDUCE --------
 // let soma = numbers.reduce(somarArray);
 // function somarArray(acumulador, b){
@@ -27,6 +27,17 @@ console.log(soma)
 //   console.log(soma)
   
 // Calcule e imprima a média aritmética dos valores contidos no array;
+
+function mediaNumbers () {
+  let soma = 0;
+  let divisor = 0;
+  for (i of numbers) {
+    soma += i;
+    divisor++;
+  }
+  console.log(soma / divisor)
+}
+// mediaNumbers();
 
 // A média aritmética é o resultado da soma de todos os elementos dividido pelo número total de elementos.
 // Com base no código que acabou de gerar, faça com que, caso o valor final seja maior que 20, imprima a mensagem: “valor maior que 20”. Caso não seja, imprima a mensagem: “valor menor ou igual a 20”;
