@@ -54,7 +54,9 @@ function valueIs(value) {
 	} else {
 		result = `${value} não é um número válido.`
 	}
+	console.log(result)
 }
+// valueIs(75)
 
 
 

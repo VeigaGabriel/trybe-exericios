@@ -21,13 +21,7 @@ function isTriangle (angulo1, angulo2, angulo3) {
   } console.log(triangleIs)
 }
 
-isTriangle(60, 60, 60)
-
-
-
-
-
-
+// isTriangle(60, 60, 60)
 
 
 
@@ -106,18 +100,22 @@ function pecaXadrez(peca) {
 // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
 
-// function notaEmLetra(porcentagem) {
-// 	if (porcentagem >= 90) {
-// 		resultado = 'A'
-// 	} else if (porcentagem >= 80) {
-// 		resultado = 'B'
-// 	} else if (porcentagem >= 70) {
-// 		resultado = 'C'
-// 	} else if (porcentagem >= 60) {
-// 		resultado = 'D'
-// 	} else if (porcentagem >= 50) {
-// 		resultado = 'E'
-// 	} else if (porcentagem < 50) {
-// 		resultado = 'F'
-// 	} else 
-// }
+function notaEmLetra(porcentagem) {
+	if (porcentagem >= 90) {
+		resultado = 'A'
+	} else if (porcentagem >= 80) {
+		resultado = 'B'
+	} else if (porcentagem >= 70) {
+		resultado = 'C'
+	} else if (porcentagem >= 60) {
+		resultado = 'D'
+	} else if (porcentagem >= 50) {
+		resultado = 'E'
+	} else if (porcentagem < 50) {
+		resultado = 'F'
+	} else {
+		resultado = 'Erro, nota inválida.'
+	}
+	console.log(resultado)
+};
+notaEmLetra(75);

@@ -7,9 +7,15 @@
 // Caso contrário, ele deve retornar false.
 // Bonus: use somente um if.
 
-
-// CÓDIGO ------------------------
-
+function algumEPar(n1, n2, n3) {
+  if (n1 % 2 == 0 || n2 % 2 == 0 || n3 % 2 == 0) {
+    parOuImpar = true
+  } else {
+    parOuImpar = false
+  }
+  console.log(parOuImpar)
+}
+// algumEPar(3,5,2)
 
 
 // --------- PROGRAMA 8 --------------
