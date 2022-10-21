@@ -1,4 +1,4 @@
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
 
 // --------- PROGRAMA 7 --------------
 // Utilize if/else para fazer um programa que, dado um salário bruto, calcule o líquido a ser recebido.

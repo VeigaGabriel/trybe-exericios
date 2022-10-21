@@ -1,8 +1,8 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
 
-//🚀 Há um par entre nós
 
 // --------- PROGRAMA 7 --------------
+//🚀 Há um par entre nós
 // Utilize if/else para fazer um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. 
 // Caso contrário, ele deve retornar false.
 // Bonus: use somente um if.
@@ -23,8 +23,16 @@ function algumEPar(n1, n2, n3) {
 // Caso contrário, ele deve retornar false.
 // Bonus: use somente um if.
 
-// CÓDIGO ------------------------
 
+function algumEImpar(n1, n2, n3) {
+  if (n1 % 2 !== 0 || n2 % 2 !== 0 || n3 % 2 !== 0) {
+    parOuImpar = true
+  } else {
+    parOuImpar = false
+  }
+  console.log(parOuImpar)
+}
+// algumEImpar(2, 4, 3)
 
 
 // --------- PROGRAMA 9 --------------
