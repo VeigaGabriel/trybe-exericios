@@ -16,14 +16,11 @@ function qualEMaior(n1, n2) {
 		}
 		console.log(resultado)
 }
-
 // qualEMaior(2, 1)
 // qualEMaior(1, 2)
 // qualEMaior()
 // qualEMaior(3)
 // qualEMaior('a')
-
-
 
 // --------- PROGRAMA 2 --------------
 // Utilize if/else para fazer um programa que retorne o maior de três números. 
@@ -43,14 +40,21 @@ function mostreOMaior(n1, n2, n3) {
 // mostreOMaior(4,5,6)
 // mostreOMaior(9,8,7)
 
-
-
 // --------- PROGRAMA 3 --------------
 // Utilize if/else para fazer um programa que, dado um valor recebido como parâmetro, retorne “positive” 
 // se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
 
-
-//CÓDIGO -------------------------
+function valueIs(value) {
+	if (value > 0) {
+		result = 'Positive'
+	} else if (value < 0) {
+		result = 'Negative'
+	} else if (value == 0) {
+		result = 'Zero'
+	} else {
+		result = `${value} não é um número válido.`
+	}
+}
 
 
 

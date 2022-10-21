@@ -10,7 +10,7 @@
 
 
 function isTriangle (angulo1, angulo2, angulo3) {
-	if (angulo1 == 0 || angulo2 == 0 || angulo3 == undefined) { // || angulo1 !== Number || angulo2 !== Number || angulo3 !== Number) {
+	if (angulo1 == 0 || angulo2 == 0 || angulo3 == undefined || typeof angulo1 !== 'number' || typeof angulo2 !== 'number' || typeof angulo3 !== 'number') {
 		triangleIs = 'Erro, defina os 3 valores do triângulo'
 	} else if (angulo1 + angulo2 + angulo3 == 180) {
     triangleIs = true
@@ -21,7 +21,9 @@ function isTriangle (angulo1, angulo2, angulo3) {
   } console.log(triangleIs)
 }
 
-// isTriangle(90, 90, 90)
+isTriangle(60, 60, 60)
+
+
 
 
 
@@ -40,9 +42,9 @@ function isTriangle (angulo1, angulo2, angulo3) {
 
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
 function pecaXadrez(peca) {
-	let pecaFaz;
-	switch(peca) {
-		case "Rei":
+	let pecaFaz = '';
+	switch(peca.toLowerCase()) {
+		case "rei":
 			pecaFaz = 'Pode mover-se em qualquer direção, porém apenas uma casa por vez, como indicam os pontos vermelhos na figura abaixo.'
 			break;
 		
@@ -67,18 +69,24 @@ function pecaXadrez(peca) {
 			break;
 						
 		case "Peão":
-			pecaFaz/*.toLowerCase()*/ = 'Move-se sempre uma casa para frente, exceto no primeiro movimento, quando pode mover-se duas casas. \
+			pecaFaz = 'Move-se sempre uma casa para frente, exceto no primeiro movimento, quando pode mover-se duas casas. \
 			O peão é a única peça que não pode retroceder, e também a única que efetua a captura com um movimento diferente do \
-			utilizado para avançar no tabuleiro. O peão pode capturar as peças que estejam uma fileira acima, mas nas colunas adjacentes a sua.'/*.toLowerCase()*/
+			utilizado para avançar no tabuleiro. O peão pode capturar as peças que estejam uma fileira acima, mas nas colunas adjacentes a sua.'
 			break;
 							
 		default:
-			console.log('Peça inválida.')
+			console.log(`A peça ${peca} não existe.`)
 	} 
-			console.log(pecaFaz/*.toLowerCase()*/);
+		
+			console.log(pecaFaz);
 }
-			pecaXadrez("peão"/*.toLowerCase()*/);
+			// pecaXadrez("rei");
 
+
+
+
+			// const sentence = 'The quick brown fox jumps over the lazy dog.';
+			// console.log(sentence.toLowerCase());
 
 
 // --------- PROGRAMA 6 --------------
@@ -98,6 +106,18 @@ function pecaXadrez(peca) {
 // O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
 
 
-
-
-// CÓDIGO ---------------------------
+// function notaEmLetra(porcentagem) {
+// 	if (porcentagem >= 90) {
+// 		resultado = 'A'
+// 	} else if (porcentagem >= 80) {
+// 		resultado = 'B'
+// 	} else if (porcentagem >= 70) {
+// 		resultado = 'C'
+// 	} else if (porcentagem >= 60) {
+// 		resultado = 'D'
+// 	} else if (porcentagem >= 50) {
+// 		resultado = 'E'
+// 	} else if (porcentagem < 50) {
+// 		resultado = 'F'
+// 	} else 
+// }
