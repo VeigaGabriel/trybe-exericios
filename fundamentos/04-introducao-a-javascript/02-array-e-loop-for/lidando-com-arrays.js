@@ -21,12 +21,13 @@ function somaNumbers () {
 }
 // somaNumbers();
 //       ------- REDUCE --------
-// let soma = numbers.reduce(somarArray);
-// function somarArray(acumulador, b){
-//   return acumulador + b;
-// }
+let soma = numbers.reduce(somarArray);
+function somarArray(acumulador, b){
+  return acumulador + b;
+  console.log(b)
+}
 
-//   console.log(soma)
+  console.log(soma)
   
 // Calcule e imprima a média aritmética dos valores contidos no array;
 
@@ -66,7 +67,7 @@ function maiorValorNumbers () {
     }
   } console.log (maiorValor)
 }
-maiorValorNumbers();
+// maiorValorNumbers();
 
 // Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: “nenhum valor ímpar encontrado”;
 
@@ -74,6 +75,4 @@ maiorValorNumbers();
 
 // Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
 
-// Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
-
-
+// Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2. //
