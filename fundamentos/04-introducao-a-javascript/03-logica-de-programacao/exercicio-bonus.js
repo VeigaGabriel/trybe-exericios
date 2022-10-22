@@ -61,7 +61,7 @@ function quadradoComAsterisco(quantidade) {
   }
 }
 
-quadradoComAsterisco(10)
+// quadradoComAsterisco(10)
 
 // Atenção! Note que esse exercício é bem mais complexo que o anterior! Não basta, aqui, imprimir somente asteriscos. Você precisará de uma lógica para imprimir espaços também.
 
@@ -73,6 +73,14 @@ quadradoComAsterisco(10)
 //  ***
 // *****
 
+function trianguloPerfeitoComAsterisco(quantidade) {
+  for (let i = 0; quantidade > i;i++){
+    console.log(" ".repeat(quantidade - 1).substring(i) + "*".repeat(i + 1) + "*".repeat(i));
+  }
+}
+
+// trianguloPerfeitoComAsterisco(10)
+
 // Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
 // Copiar
 // Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
@@ -82,6 +90,23 @@ quadradoComAsterisco(10)
 //   * *
 //  *   *
 // *******
+
+function trianguloContornoAsterisco(quantidade) {
+  for (let i = 0; quantidade > i;i++){
+    triangulo = " ".repeat(quantidade - 1).substring(i) + "*" + " ".repeat(i + i).substring(1)
+    if (i == 0) {
+      console.log(triangulo)
+    } else if (i > 0 && i < quantidade - 1) {
+      console.log(triangulo + "*".repeat(1))
+    }
+    if (i == quantidade - 1) {
+      console.log("*".repeat(quantidade + quantidade - 1))
+    }
+  }
+}
+
+trianguloContornoAsterisco(10)
+
 // Faça um programa que diz se um número definido numa variável é primo ou não.
 // Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele por quaisquer outros números dá resto diferente de zero.
 
