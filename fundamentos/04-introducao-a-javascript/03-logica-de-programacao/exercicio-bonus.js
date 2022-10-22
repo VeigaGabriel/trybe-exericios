@@ -105,10 +105,45 @@ function trianguloContornoAsterisco(quantidade) {
   }
 }
 
-trianguloContornoAsterisco(10)
+// trianguloContornoAsterisco(10)
 
 // Faça um programa que diz se um número definido numa variável é primo ou não.
+
+function isPrime(num){
+  if(num == 2 || num == 3){
+  result = `O número ${num} é primo!`
+  } else if (num == 1) {
+  result = `O número ${num} não é primo!`
+  } else {
+    for (let i = 2;i < num;i++) {
+      if (num % i !== 0) {
+        return console.log(`O número ${num} é primo!`)
+      } else {
+        return console.log(`O número ${num} não é primo!`)
+      }
+    }
+
+  } 
+  
+
+}
+
+isPrime(5)
+isPrime(7)
+isPrime(8)
+isPrime(11)
+isPrime(14)
+isPrime(15)
+isPrime(16)
+isPrime(17)
+isPrime(18)
+isPrime(18)
+isPrime(23)
+isPrime(29)
+
+
+
+
 // Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele por quaisquer outros números dá resto diferente de zero.
 
 // Dica: você vai precisar de fazer um loop que vá de 0 ao número definido. Além disso, vai precisar fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
-//;
