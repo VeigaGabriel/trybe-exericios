@@ -10,13 +10,12 @@
 
 function quadradoComAsterisco(quantidade) {
   let asterisco = "*";
-  
   for (let i = 0; quantidade > i;i++){
     console.log(asterisco.repeat(quantidade))
   }
 }
 
-quadradoComAsterisco(10)
+// quadradoComAsterisco(10)
 
 // Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
 // Copiar
@@ -47,6 +46,23 @@ function escadaComAsterisco(quantidade) {
 //   ***
 //  ****
 // *****
+
+// function escadaInversaComAsterisco(quantidade) {
+//   for (let i = 0; quantidade > i;i++){
+//     console.log(" ".repeat(quantidade - 1).substring(i) + "*".repeat(i + 1)); // Gabriel Veiga Turma 28 A
+//   }
+// }
+
+// escadaInversaComAsterisco(10)
+
+function quadradoComAsterisco(quantidade) {
+  for (let i = 0; quantidade > i;i++){
+    console.log(" ".repeat(quantidade - i -1) + "*".repeat(i + 1));    // Nathan Nunes Turma 16 B
+  }
+}
+
+quadradoComAsterisco(10)
+
 // Atenção! Note que esse exercício é bem mais complexo que o anterior! Não basta, aqui, imprimir somente asteriscos. Você precisará de uma lógica para imprimir espaços também.
 
 // Depois, faça uma pirâmide com n asteriscos de base:
@@ -56,6 +72,7 @@ function escadaComAsterisco(quantidade) {
 //   *
 //  ***
 // *****
+
 // Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
 // Copiar
 // Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
