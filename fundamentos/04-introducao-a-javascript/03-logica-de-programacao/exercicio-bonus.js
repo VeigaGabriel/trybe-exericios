@@ -8,6 +8,16 @@
 // *****
 // *****
 
+function quadradoComAsterisco(quantidade) {
+  let asterisco = "*";
+  
+  for (let i = 0; quantidade > i;i++){
+    console.log(asterisco.repeat(quantidade))
+  }
+}
+
+quadradoComAsterisco(10)
+
 // Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
 // Copiar
 // n = 5
@@ -26,7 +36,7 @@ function escadaComAsterisco(quantidade) {
   }
 }
 
-escadaComAsterisco(3)
+// escadaComAsterisco(3)
 
 // Agora inverta o lado do triângulo. Por exemplo:
 // Copiar
