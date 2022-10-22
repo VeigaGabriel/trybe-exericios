@@ -7,6 +7,7 @@
 // *****
 // *****
 // *****
+
 // Faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
 // Copiar
 // n = 5
@@ -16,6 +17,17 @@
 // ***
 // ****
 // *****
+
+function escadaComAsterisco(quantidade) {
+  let asterisco = [];
+  for (let i = 0 ; quantidade > i; i++) {
+    asterisco.push("*");
+  console.log(asterisco.join(''));
+  }
+}
+
+escadaComAsterisco(3)
+
 // Agora inverta o lado do triângulo. Por exemplo:
 // Copiar
 // n = 5
