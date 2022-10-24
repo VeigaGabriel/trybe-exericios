@@ -128,18 +128,18 @@ function isPrime(num){
 
 }
 
-isPrime(5)
-isPrime(7)
-isPrime(8)
-isPrime(11)
-isPrime(14)
-isPrime(15)
-isPrime(16)
-isPrime(17)
-isPrime(18)
-isPrime(18)
-isPrime(23)
-isPrime(29)
+// isPrime(5)
+// isPrime(7)
+// isPrime(8)
+// isPrime(11)
+// isPrime(14)
+// isPrime(15)
+// isPrime(16)
+// isPrime(17)
+// isPrime(18)
+// isPrime(18)
+// isPrime(23)
+// isPrime(29)
 
 
 
@@ -147,3 +147,4 @@ isPrime(29)
 // Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele por quaisquer outros números dá resto diferente de zero.
 
 // Dica: você vai precisar de fazer um loop que vá de 0 ao número definido. Além disso, vai precisar fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
+
