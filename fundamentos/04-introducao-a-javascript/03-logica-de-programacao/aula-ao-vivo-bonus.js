@@ -6,11 +6,11 @@
 
 // function pedraPapelTesoura2() {
 
-//   let player1 = {
-//     pedra: 'pedra',
-//     papel: 'papel',
-//     tesoura: 'tesoura'
-//   }
+  // let player1 = {
+  //   pedra: 'pedra',
+  //   papel: 'papel',
+  //   tesoura: 'tesoura'
+  // }
 
 //   let player2 = {
 //     pedra: 'pedra',
