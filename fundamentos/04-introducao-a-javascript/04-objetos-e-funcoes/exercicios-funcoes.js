@@ -30,16 +30,38 @@ function maiorValor(){
 
 // Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 
-// Array de teste: [2, 4, 6, 7, 10, 0, -3];.
 
-// Valor esperado no retorno da função: 6.
+function menorValor(){
+  let valores = [2, 4, 6, 7, 10, 0, -3];
+  let menor = Math.min(...valores);
+    for (i in valores) {
+      if (valores[i] == menor) {
+      return i
+      }
+    }
+};
+// console.log(menorValor())
 
 // --------------------------------
 
 // Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
 
-// Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];.
-
+function maiorPalavra() {
+  let nomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']
+  let valores = [0]
+  let maiorValor;
+  for (i of nomes) {
+    valores.push(i.length)
+  }
+  maiorValor = Math.max(...valores)
+  for (index of nomes) {
+    if (index.length == maiorValor){
+      return index
+    }
+  }
+}
+console.log(maiorPalavra())
+// maiorPalavra()
 // Valor esperado no retorno da função: Fernanda.
 
 // --------------------------------
