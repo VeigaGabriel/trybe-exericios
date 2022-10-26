@@ -60,13 +60,18 @@ function maiorPalavra() {
     }
   }
 }
-console.log(maiorPalavra())
+// console.log(maiorPalavra())
 // maiorPalavra()
 // Valor esperado no retorno da função: Fernanda.
 
 // --------------------------------
 
 // Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function conta() {
+  let nums = [2, 3, 2, 5, 8, 2, 3];
+console.log ('abbcda'.toString())
+}
+console.log(conta())
 
 // Array de teste: [2, 3, 2, 5, 8, 2, 3];.
 
