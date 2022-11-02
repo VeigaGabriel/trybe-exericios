@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+
+const corpo = document.getElementsByTagName('body')[0];  // BUSCANDO OS ELEMENTOS
+
+// ----- Funciona -----
+// const criaH1 = document.createElement('h1')
+// const addH1 = corpo.appendChild(criaH1)
+
+
+const criaElemento = (tag) => document.createElement(tag); // AUTO CREATE ELEMENT
+const addFilho = (tag, elemento) => tag.appendChild(elemento); // AUTO APPEND CHILD
+
+const criaH1 = criaElemento('h1');
+const addH1 = addFilho(corpo, criaH1).innerHTML = "Exercício - JavaScript DOM"; // 1 V
+
+const criaMain = criaElemento('main');
+criaMain.classList.add('main-content'); // ou .className = 'main-content';
+const addMain = addFilho(corpo, criaMain); // 2 V
+
+const main = document.getElementsByTagName('main')[0];
+
+
+const addCenterContent = addFilho(main, criaElemento('section'))
+.classList.add('center-content'); // 3
+
+const section = document.getElementsByTagName('section')[0];
+
+const addParagrafo = addFilho(section, criaElemento('p')); // 4
+
+const addLeftContent = addFilho(main, criaElemento('section'))
+.classList.add('left-content') // 5
+
+const addRightContent = addFilho(main, criaElemento('section'))
+.classList.add('right-content') // 6
+
+const image = criaElemento('img');
+image.classList.add('small-image');
+const addImage = section.appendChild(image)
+.src = 'https://picsum.photos/200'; // 7
+
+for (let i = 0; i < 10; i += 1) {
+  const lista = addFilho(section, criaElemento('li'));
+} // 8 +/-
+
+for (let i = 0; i < 3; i += 1) {
+  const listah3 = addFilho(main, criaElemento('h3'))
+  .classList.add('description'); // B 2
+} // 9
+
+// ------- BÔNUS --------
+
+const h1 = document.getElementsByTagName('h1')
+
+criaH1.classList.add('title') // B 1
+
+// main.removeChild(section) // B 3 +/-
+
+section.style.marginRight = "auto"; // B 4
+main.style.background = "green"; //  B 5 +/-
+
+
+
+// const addTitle = addFilho(h1, criaElemento('title'))
+
+      // COLOQUE SEU CÓDIGO AQUI
+    </script>
+  </body>
+</html>
