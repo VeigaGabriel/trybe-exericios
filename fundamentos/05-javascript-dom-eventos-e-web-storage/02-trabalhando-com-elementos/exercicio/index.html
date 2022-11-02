@@ -73,33 +73,49 @@ const criaH1 = criaElemento('h1');
 const addH1 = addFilho(corpo, criaH1).innerHTML = "Exercício - JavaScript DOM"; // 1 V
 
 const criaMain = criaElemento('main');
-criaMain.classList.add('main-content'); // ou .className = 'main-content';
+criaMain.classList.add('main-content'); // -------------------------- ou .className = 'main-content';
 const addMain = addFilho(corpo, criaMain); // 2 V
 
 const main = document.getElementsByTagName('main')[0];
 
 
 const addCenterContent = addFilho(main, criaElemento('section'))
-.classList.add('center-content'); // 3
+.classList.add('center-content'); // 3 V
 
 const section = document.getElementsByTagName('section')[0];
 
-const addParagrafo = addFilho(section, criaElemento('p')); // 4
+const addParagrafo = addFilho(section, criaElemento('p')); // 4 V
 
 const addLeftContent = addFilho(main, criaElemento('section'))
-.classList.add('left-content') // 5
+.classList.add('left-content') // 5 V
 
 const addRightContent = addFilho(main, criaElemento('section'))
-.classList.add('right-content') // 6
+.classList.add('right-content') // 6 V
 
 const image = criaElemento('img');
 image.classList.add('small-image');
 const addImage = section.appendChild(image)
-.src = 'https://picsum.photos/200'; // 7
+.src = 'https://picsum.photos/200'; // 7 V
 
-for (let i = 0; i < 10; i += 1) {
-  const lista = addFilho(section, criaElemento('li'));
-} // 8 +/-
+// for (let i = 0; i < 10; i += 1) {
+//   const lista = addFilho(section, criaElemento('li'));
+// } // 8 +/-
+
+
+// ----------------------- 8 GABARITO -----------------------
+
+const elementUl = document.createElement('ul');
+      elementSectionRight.appendChild(elementUl);
+      const arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez']
+      for (let num in arrayNumbers) {
+        const elementLi = document.createElement('li');
+        elementLi.innerHTML = arrayNumbers[num];
+        elementUl.appendChild(elementLi);
+      }           
+
+// ---------------------------------------------------------------
+
 
 for (let i = 0; i < 3; i += 1) {
   const listah3 = addFilho(main, criaElemento('h3'))
