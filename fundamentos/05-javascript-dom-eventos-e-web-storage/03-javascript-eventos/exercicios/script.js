@@ -15,35 +15,41 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
-// const decemberDaysList = [29, 30]
-// const add31Dias = (arrMes) => {
-//   for (let i = 0; i <= 31; i += 1) {
-//     const days = arrMes.push(i);
-//   }
-//   return arrMes;
-// }
-
-// decemberDaysList.push(add31Dias(decemberDaysList))
-// console.log(decemberDaysList)
-
-
 // -------------- PARTE 1 -------------------
 
-const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-const tagUl = document.getElementsByTagName('ul');
-const tagLi = document.getElementsByTagName('li');
+const ul = document.getElementsByTagName('ul');
+const li = document.getElementsByTagName('li');
 
 // classe ul deve conter id 'days'
-const daysToUl = tagUl.appendChild('days') // revisar
+ul.id = "days";
+
 
 // Os dias devem estar contidos em uma tag <li>, e todos devem ter a classe day. Ex: <li class="day">3</li>;
-const escrever = tagLi.innerHTML = decemberDaysList 
 
 
 // Os dias 4, 11, 18 e 25 são sextas-feiras. Eles devem conter a classe day e a classe friday. Ex: <li class="day friday">4</li>
-const sextaFeiras = [4, 11, 18, 25]
-const friday = daysToUl.appendChild('friday') // revisar
+// const friday = daysToUl.appendChild('friday') // revisar
+const diasDeDezembro = () => {
+  const ul = document.getElementsByTagName('ul')[0];
+  const li = document.getElementsByTagName('li')[0];
+  const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  for (index in decemberDaysList) {
+    const dias = decemberDaysList[index];
+    listaDeDias = document.createElement('li');
+
+    listaDeDias.innerHTML = dias;
+    listaDeDias.className = "day";
+    // console.log(listaDeDias);
+
+    ul.appendChild(listaDeDias);
+    
+    if (index == 4 || index == 11 || index == 18 || index == 25) {
+      listaDeDias.classList.add('friday');
+    }
+  }
+}
+diasDeDezembro();
 
 // -------------- PARTE 2 -------------------
 
