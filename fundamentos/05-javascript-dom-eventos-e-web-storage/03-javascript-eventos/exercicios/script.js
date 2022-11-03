@@ -30,7 +30,7 @@ ul.id = "days";
 
 // Os dias 4, 11, 18 e 25 são sextas-feiras. Eles devem conter a classe day e a classe friday. Ex: <li class="day friday">4</li>
 // const friday = daysToUl.appendChild('friday') // revisar
-const diasDeDezembro = () => {
+const decemberDay = () => {
   const ul = document.getElementsByTagName('ul')[0];
   const li = document.getElementsByTagName('li')[0];
   const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
@@ -49,7 +49,7 @@ const diasDeDezembro = () => {
     }
   }
 }
-diasDeDezembro();
+decemberDay();
 
 // -------------- PARTE 2 -------------------
 
@@ -58,14 +58,14 @@ diasDeDezembro();
 // Adicione a este botão a ID "btn-holiday";
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
 
-const criarFeriados = () => {
+const createHoliday = () => {
   const buttonsContainer = document.getElementsByClassName('buttons-container')[0];
   const botao = document.createElement('button')
   botao.innerText = "Feriados";
   botao.setAttribute('id', "btn-holiday")
   const feriado = buttonsContainer.appendChild(botao)
 }
-criarFeriados()
+createHoliday()
 
 // -------------- PARTE 3 -------------------
 
@@ -77,12 +77,13 @@ const changeHolidayBackground = () => {
   const botaoFeriados = document.getElementById('btn-holiday');
     botaoFeriados.addEventListener('click', () => {
     botaoFeriados.style.background = "red";
-    botaoFeriados.addEventListener('mouseleave', () => {
+    botaoFeriados.addEventListener('mousedown', () => {
       botaoFeriados.style.background = "rgb(238,238,238)";
     })
   })
+  
 } 
-changeHolidayBackground()
+changeHolidayBackground() // Revisar clique infinito
 
 // -------------- PARTE 4 -------------------
 
@@ -147,4 +148,10 @@ changeHolidayBackground()
 
 
 
+const funcao1 = () => {
+  const funcao2 = () =>{
 
+  }
+  funcao2()
+}
+funcao1()
