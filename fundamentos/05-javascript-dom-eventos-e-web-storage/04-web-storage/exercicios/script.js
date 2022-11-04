@@ -1,8 +1,14 @@
 const caracteristicas = document.getElementsByClassName('caracteristicas');
 
+const coresFundo = ['white', 'black', 'green', 'blue', 'yellow'];
+const coresFonte = ['black', 'red', 'white'];
+const tamanhoFonte = ['8pt', '10pt', '12pt', '14pt', '20pt'];
+const espacoLinhas = ['1', 'normal', '1.5', '2.0', '3.0']
+const tipoFonte = ['Arial', 'Times New Roman']
+
 const criarBotao = (indexDiv, quantidade, nome) => {
   const text = document.querySelector('.text');
-  const text1 = document.querySelectorAll('.text')[1];
+  const text1 = document.querySelectorAll('.text')[1]; // trocar para 1 constante
 
   for (let index = 0; index < quantidade; index += 1) {
     const createButton = document.createElement('button');
@@ -11,7 +17,7 @@ const criarBotao = (indexDiv, quantidade, nome) => {
     caracteristicas[indexDiv].appendChild(createButton);
 
     if (nome === coresFundo) {
-      createButton.addEventListener('click', () => {
+      createButton.addEventListener('click', () => { // trocar para switch case
         text.style.background = nome[index];
         text1.style.background = nome[index];
       })
@@ -46,12 +52,6 @@ const criarBotao = (indexDiv, quantidade, nome) => {
     }
   }
 }
-
-const coresFundo = ['white', 'black', 'green', 'blue', 'yellow'];
-const coresFonte = ['black', 'red', 'white'];
-const tamanhoFonte = ['8pt', '10pt', '12pt', '14pt', '20pt'];
-const espacoLinhas = ['1', 'normal', '1.5', '2.0', '3.0']
-const tipoFonte = ['Arial', 'Times New Roman']
 criarBotao(0, 5, coresFundo);
 criarBotao(1, 3, coresFonte);
 criarBotao(2, 5, tamanhoFonte);

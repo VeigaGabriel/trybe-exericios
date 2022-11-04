@@ -60,7 +60,7 @@ decemberDay();
 
 const createHoliday = () => {
   const buttonsContainer = document.getElementsByClassName('buttons-container')[0];
-  const botao = document.createElement('button')
+  const botao = document.createElement('button');
   botao.innerText = "Feriados";
   botao.setAttribute('id', "btn-holiday")
   const feriado = buttonsContainer.appendChild(botao)
@@ -91,6 +91,18 @@ changeHolidayBackground() // Revisar clique infinito
 // Sua função deve receber como parâmetro a string “Sexta-feira”;
 // Adicione a esse botão o ID "btn-friday";
 // Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+const botaoSextaFeira = (param) => {
+  const buttonsContainer = document.getElementsByClassName('buttons-container')[0];
+  const botao = document.createElement('button');
+  botao.id = "btn-friday"; // ou .setAttribute('id', 'btn-holiday')
+  botao.innerHTML = param;
+  buttonsContainer.appendChild(botao);
+
+  botao.addEventListener('click', () => { // Parte 5
+    botao.style.background = "red"
+  })
+}
+botaoSextaFeira("Sexta-feira")
 
 // -------------- PARTE 5 -------------------
 
@@ -98,6 +110,13 @@ changeHolidayBackground() // Revisar clique infinito
 // Adicione ao botão “Sexta-feira” um evento de “click” e modifique o texto a ser exibido nos dias que são sextas-feiras.
 // De olho na dica 👀: É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
 
+// const modificaSexta = () => {
+//   const sexta = document.getElementsByClassName('btn-friday')[0];
+//   sexta.addEventListener('click', () => {
+//     sexta.style.background = "red"
+//   })
+// }
+// modificaSexta()
 // -------------- PARTE 6 -------------------
 
 // Implemente duas funções que criem um efeito de “zoom”;
