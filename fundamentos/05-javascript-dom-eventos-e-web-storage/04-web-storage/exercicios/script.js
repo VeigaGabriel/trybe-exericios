@@ -1,27 +1,54 @@
 const caracteristicas = document.getElementsByClassName('caracteristicas');
-// const button = document.getElementsByTagName('button')
 
-// const a = createButton = document.createElement('button');
-// createButton.className = 'XX';
-// createButton.innerHTML = "botao"
-
-// const addButton = caracteristicas[0].appendChild(createButton)
 const criarBotao = (indexDiv, quantidade, nome) => {
+  const text = document.querySelector('.text');
+  const text1 = document.querySelectorAll('.text')[1];
+
   for (let index = 0; index < quantidade; index += 1) {
     const createButton = document.createElement('button');
-    createButton.className = 'XX';
-    createButton.innerHTML = nome[index]
+    createButton.innerHTML = nome[index];
     
-    caracteristicas[indexDiv].appendChild(createButton)
+    caracteristicas[indexDiv].appendChild(createButton);
 
-    createButton.addEventListener('click', () => {
-      createButton.style.background = nome[index];
-    })
+    if (nome === coresFundo) {
+      createButton.addEventListener('click', () => {
+        text.style.background = nome[index];
+        text1.style.background = nome[index];
+      })
+    }
+
+    if (nome === coresFonte) {
+      createButton.addEventListener('click', () => {
+        text.style.color = nome[index];
+        text1.style.color = nome[index];
+      })
+    }
+
+    if (nome === tamanhoFonte) {
+      createButton.addEventListener('click', () => {
+        text.style.fontSize = nome[index];
+        text1.style.fontSize = nome[index];
+      })
+    }
+
+    if (nome === espacoLinhas) {
+      createButton.addEventListener('click', () => {
+        text.style.lineHeight = nome[index];
+        text1.style.lineHeight = nome[index];
+      })
+    }
+
+    if (nome === tipoFonte) {
+      createButton.addEventListener('click', () => {
+        text.style.fontFamily = nome[index];
+        text1.style.fontFamily = nome[index];
+      })
+    }
   }
 }
-// const bg = CSSStyleDeclaration.background;
+
 const coresFundo = ['white', 'black', 'green', 'blue', 'yellow'];
-const coresFonte = ['preto', 'vermelho', 'branco'];
+const coresFonte = ['black', 'red', 'white'];
 const tamanhoFonte = ['8pt', '10pt', '12pt', '14pt', '20pt'];
 const espacoLinhas = ['1', 'normal', '1.5', '2.0', '3.0']
 const tipoFonte = ['Arial', 'Times New Roman']
