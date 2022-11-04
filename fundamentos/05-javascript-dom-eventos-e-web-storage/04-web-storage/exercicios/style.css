@@ -1,0 +1,29 @@
+#quadrado {
+  background-color: #0F81FA;
+
+
+}
+
+.caracteristicas {
+  color: #5AA8FB;
+  background-color: #26307A;
+  padding: 10px;
+  display: inline-block;
+  margin: 4.6%;
+  /* border-style: solid; */
+
+}
+
+.caracteristicas button {
+  color: white;
+  background-color: #5AA8FB;
+  /* display: flex; */
+  display: block;
+  /* text-align: center; */
+  margin: auto;
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 80%;
+}
+
